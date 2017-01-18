@@ -318,7 +318,7 @@ header[role=banner] {
 }
 
 nav[role=navigation] li a {
-  background-color: rgba(50, 50, 50, .9);
+  background-color: black;
 }
 
 nav[role=navigation] li a:hover {
