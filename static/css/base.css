@@ -797,7 +797,7 @@ li,p:last-child {
 }
 
 
-ul>li,ol>li {margin-left: 3.2rem;}
+ul>li,ol>li {margin-left: 0;}
 li li {
   font-size: 100%;
 }
@@ -1197,19 +1197,21 @@ section footer {
 
 /*=== Hide header[role=banner] === */
 
-/*desktop only? Add @media (min-width: 1025px)*/
-header[role=banner] {
+@media (min-width: 1025px) {
+  header[role=banner] {
     opacity: 0;
-}
-/*=== Show Header[role=banner] === */
-header[role=banner]:hover {
-  opacity: 1;
+  } 
+
+  /*=== Show Header[role=banner] === */
+  header[role=banner]:hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 767px) {
-footer .alignleft, footer .alignright {
-float: none;
-display: block;
+  footer .alignleft, footer .alignright {
+    float: none;
+    display: block;
  }
 }
 
@@ -1235,10 +1237,11 @@ display: block;
 }
 
 
-/*@media (max-width: 600px){
+@media (max-width: 500px){
 .logo a {text-indent: -4000px;
- }
-}*/
+  display:none !important; 
+}
+}
 
 /*=========================================
 4. Navigation
@@ -1275,6 +1278,9 @@ nav[role=navigation] ul li {
   margin-left: 0;
 }
 
+@media (max-width: 499px) {
+}
+
 nav[role=navigation] li a {
   position: relative;
   padding: 0 1.6rem;
@@ -1286,7 +1292,9 @@ nav[role=navigation] li a {
   max-width: 100%;
   /*full li>a when you decide*/
 }
-nav[role=navigation] li a svg {margin: 1.5rem .4rem 1.5rem 0;}
+nav[role=navigation] li a svg {margin: 1.5rem .4rem 1.5rem 0;
+  width: 24px;
+}
 
 header nav ul {
   margin: 0;
